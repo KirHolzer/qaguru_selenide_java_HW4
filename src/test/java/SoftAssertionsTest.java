@@ -50,6 +50,7 @@ public class SoftAssertionsTest {
         open("/selenide/selenide");
         $("#wiki-tab").click();
         $(".wiki-rightbar").$(byText("Show 3 more pages…")).click();
+        $(".wiki-rightbar").shouldHave(text("SoftAssertions"));
         $(byText("SoftAssertions")).click();
         $("#wiki-body").shouldHave(text(snippetOfJUnit5));
     }
